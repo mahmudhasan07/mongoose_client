@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 
 const Additem = () => {
@@ -10,6 +11,15 @@ const from = e.target
         const price = from.price.value
         const details = from.details.value
         console.log(name,price,details);
+        const product = {name,price,details}
+        console.log(product);
+        axios.post("http://localhost:3000/additems", product)
+        .then((res)=>{
+            console.log(res.data);
+        })
+        .catch(error=>{
+            console.log(error);
+        })
 
 
     }
