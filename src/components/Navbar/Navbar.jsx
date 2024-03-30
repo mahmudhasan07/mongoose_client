@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div>
+        <div className='py-5 border-2'>
             <ul className='flex justify-center gap-10'>
                 <NavLink><li>Home</li></NavLink>
                 <NavLink><li>Items</li></NavLink>
