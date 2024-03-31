@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Additem from './components/Additem.jsx'
+import Items from './components/Items.jsx'
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path : "/additems",
         element : <Additem></Additem>
+      },
+      {
+        path : '/items',
+        element : <Items></Items>
       }
     ]
   }

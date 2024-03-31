@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className='py-5 border-2'>
             <ul className='flex justify-center gap-10'>
                 <NavLink><li>Home</li></NavLink>
-                <NavLink><li>Items</li></NavLink>
+                <NavLink to={`/items`}><li>Items</li></NavLink>
                 <NavLink to={`/additems`}><li>Add Item</li></NavLink>
                 <NavLink><li>Update Item</li></NavLink>
             </ul>
