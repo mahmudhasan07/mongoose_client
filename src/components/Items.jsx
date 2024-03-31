@@ -32,13 +32,24 @@ const [loading, setloading] = useState(false);
 };
 
 const Card =({card})=>{
+
+    const handledelete =(id)=>{
+        // console.log(id);
+        axios.delete(`http://localhost:3000/items/${id}`)
+        .then(res=>{
+            console.log(res);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    }
     return(
-        <div className='w-80 border-2 h-full'>
+        <div className='w-80 border-2 flex flex-col  h-72'>
             <h1>Name: {card?.name}</h1>
             <h1>price: {card?.price}</h1>
             <h1>Details: {card?.details}</h1>
-            <div>
-                <button>Delete</button>
+            <div className='mt-auto mx-auto my-3'>
+                <button onClick={()=> handledelete(card._id)} className='btn btn-success'>Delete</button>
             </div>
 
         </div>
