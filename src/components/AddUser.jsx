@@ -1,6 +1,14 @@
 import React from 'react';
 
 const AddUser = () => {
+
+    const handleuser =(e)=>{
+        e.preventDefault()
+        const from = e.target
+        const name = from.name.value
+        const age = from.age.value
+        const details = from.details.value
+    }
     return (
         <section>
             <div>
@@ -11,7 +19,7 @@ const AddUser = () => {
                     </div>
                     <div>
                         <label>User Age</label> <br />
-                        <input type="number" name='price' className='w-80 border-2 rounded-xl p-1' />
+                        <input type="number" name='age' className='w-80 border-2 rounded-xl p-1' />
                     </div>
                     <div>
                         <label>User Details</label> <br />
