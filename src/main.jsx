@@ -5,6 +5,8 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Additem from './components/Additem.jsx'
 import Items from './components/Items.jsx'
+import User from './components/User.jsx'
+import AddUser from './components/AddUser.jsx'
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path : '/items',
         element : <Items></Items>
+      },
+      {
+        path : "/usersInfo",
+        element : <User></User>
+      },
+      {
+        path : '/addUser',
+        element : <AddUser></AddUser>
       }
     ]
   }

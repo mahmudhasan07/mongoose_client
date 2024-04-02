@@ -8,10 +8,12 @@ const AddUser = () => {
         const name = from.name.value
         const age = from.age.value
         const details = from.details.value
+        const userInfo = {name,age,details}
+        console.log(userInfo);
     }
     return (
-        <section>
-            <div>
+        <section className=' flex justify-center items-center'>
+            <div className='mt-20 w-1/3 p-2 border-2 rounded-xl'>
                 <form action="" onSubmit={handleuser}>
                     <div>
                         <label>User Name</label> <br />
