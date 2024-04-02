@@ -37,7 +37,7 @@ const Card = ({ card, setloading }) => {
         // console.log(id);
         setloading(true)
 
-        axios.delete(`http://localhost:3000/items/${id}`)
+        axios.delete(`https://mongoose-server-indol.vercel.app/items/${id}`)
             .then(res => {
                 console.log(res);
                 setloading(false)
