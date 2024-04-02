@@ -3,24 +3,27 @@ import React, { useEffect, useState } from 'react';
 
 const User = () => {
     const [array, setarray] = useState([]);
-const [loading, setloading] = useState(false);
+    const [loading, setloading] = useState(false);
     useEffect(() => {
         setloading(true)
         axios.get("https://mongoose-server-indol.vercel.app/users")
-        .then(res=>{
-            setarray(res.data)
-            setloading(false)
-        })
-        .catch(err=>{
-            console.log(err);
-        })
+            .then(res => {
+                setarray(res.data)
+                setloading(false)
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }, []);
     return (
         <section>
-            <h1>User Information</h1>
-            <div>
+            <h1 className='text-4xl font-bold text-center my-10 text-white'>User Information</h1>
+            <div className='flex justify-center gap-10'>
                 {
-array.map(element=> <Card key={element._id} card={element} setloading={setloading}></Card>)
+                    loading == true ?
+                        "loading"
+                        :
+                        array.map(element => <Card key={element._id} card={element} setloading={setloading}></Card>)
                 }
             </div>
         </section>
@@ -43,7 +46,7 @@ const Card = ({ card, setloading }) => {
             })
     }
     return (
-        <div className='w-80 border-2 flex flex-col  h-72'>
+        <div className='w-80 border-2 flex flex-col p-2  h-72'>
             <h1>Name: {card?.name}</h1>
             <h1>price: {card?.age}</h1>
             <h1>Details: {card?.details}</h1>
