@@ -13,7 +13,7 @@ const from = e.target
         console.log(name,price,details);
         const product = {name,price,details}
         console.log(product);
-        axios.post("http://localhost:3000/additems", product)
+        axios.post("https://mongoose-server-indol.vercel.app/additems", product)
         .then((res)=>{
             console.log(res.data);
         })

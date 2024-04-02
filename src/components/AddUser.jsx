@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 
 const AddUser = () => {
@@ -10,6 +11,13 @@ const AddUser = () => {
         const details = from.details.value
         const userInfo = {name,age,details}
         console.log(userInfo);
+        axios.post("https://mongoose-server-indol.vercel.app/addusers", userInfo)
+        .then(res=>{
+            console.log(res);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
     }
     return (
         <section className=' flex justify-center items-center'>

@@ -6,7 +6,7 @@ const Items = () => {
     const [loading, setloading] = useState(false);
     useEffect(() => {
         setloading(true)
-        axios.get(`http://localhost:3000/items`)
+        axios.get(`https://mongoose-server-indol.vercel.app/items`)
             .then(res => {
                 console.log(res.data);
                 setarray(res.data)
