@@ -7,6 +7,7 @@ import Additem from './components/Additem.jsx'
 import Items from './components/Items.jsx'
 import User from './components/User.jsx'
 import AddUser from './components/AddUser.jsx'
+import UpdateUser from './components/UpdateUser.jsx'
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path : '/items',
         element : <Items></Items>
+      },
+      {
+        path : "/items/:id",
+        element : <UpdateUser></UpdateUser>
       },
       {
         path : "/usersInfo",

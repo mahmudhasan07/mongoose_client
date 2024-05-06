@@ -14,9 +14,11 @@ const AddUser = () => {
         axios.post("https://mongoose-server-indol.vercel.app/addusers", userInfo)
         .then(res=>{
             console.log(res);
+            alert("Successfully added")
         })
         .catch(err=>{
             console.log(err);
+            alert("Unsuccessfully to add")
         })
     }
     return (
