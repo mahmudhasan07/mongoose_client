@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useNavigate } from 'react-router-dom';
+import './Items.css'
 
 const Items = () => {
     const [array, setarray] = useState([]);
@@ -65,7 +66,7 @@ const Card = ({ card, setloading, id }) => {
     }
 
     return (
-        <motion.div ref={ref} initial={{ x: -500, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1.5, delay: id * 1.5 }}  className='w-80 border-2 flex flex-col  h-full'>
+        <motion.div  ref={ref} initial={{ x: -500, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1, delay: id * 1 }}  className='hoverEffect w-80 border-2 flex flex-col  h-full'>
             <h1 className='text-4xl font-bold'>Name: {card?.name}</h1>
             <h1 className='text-3xl font-bold'>price: {card?.price}</h1>
             <h1 className='my-3 text-xl font-semibold'>Details: {card?.details}</h1>

@@ -1,0 +1,9 @@
+.hoverEffect{
+    border: 0px;
+    transition: all 1s;
+}
+
+
+.hoverEffect:hover{
+    border:  5px solid blue;
+}

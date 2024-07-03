@@ -8,6 +8,7 @@ import Items from './components/Items.jsx'
 import User from './components/User.jsx'
 import AddUser from './components/AddUser.jsx'
 import UpdateUser from './components/UpdateUser.jsx'
+import Home from './components/Home.jsx'
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <App></App>,
     children :[
+      {
+        path : '/',
+        element: <Home></Home>
+      },
       {
         path : "/additems",
         element : <Additem></Additem>
