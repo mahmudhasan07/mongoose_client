@@ -1,5 +1,6 @@
 import React from 'react';
-import { HoverEffect } from "../ui/card-hover-effect";
+import "./Home.css"
+// import { HoverEffect } from "../ui/card-hover-effect";
 const Home = () => {
     const projects = [
         {
@@ -42,11 +43,15 @@ const Home = () => {
     return (
         <section>
             <h1 className='text-center text-3xl my-10 '>This is a home page</h1>
-            <div className='border-2'>
+            <div id='image_round' className='border-2'>
+                <img id='images1' src="https://i.ibb.co/Fg80JR1/78c1d5765e418c5478408a58e7a81e72.png" alt="" />
+                {/* <img id='images2' src="https://i.ibb.co/Fg80JR1/78c1d5765e418c5478408a58e7a81e72.png" alt="" />
+                <img id='images3' src="https://i.ibb.co/Fg80JR1/78c1d5765e418c5478408a58e7a81e72.png" alt="" />
+                <img id='images4' src="https://i.ibb.co/Fg80JR1/78c1d5765e418c5478408a58e7a81e72.png" alt="" /> */}
 
             </div>
             <div>
-                <HoverEffect items={projects} />
+                {/* <HoverEffect items={projects} /> */}
             </div>
         </section>
     );

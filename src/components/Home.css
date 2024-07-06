@@ -1,0 +1,144 @@
+#image_round {
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#images1,
+#images2,
+#images3,
+#images4 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+#images1 {
+    top: 0px;
+    left: 0px;
+    animation: image1  10s infinite;
+}
+
+/* #images2 {
+    top: 0px;
+    left: calc(100% - 120px);
+    animation: image2 alternate 2s;
+} */
+
+/* #images3 {
+    top: calc(100% - 120px);
+    left: 0px;
+    animation: image3 alternate 2s;
+} */
+
+/* #images4 {
+    top: calc(100% - 120px);
+    left: calc(100% - 120px);
+    animation: image4 alternate 2s;
+} */
+
+@keyframes image1 {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    25% {
+        top: 0px;
+        left: calc(100% - 120px);
+    }
+
+    50% {
+        top: calc(100% - 120px);
+        left: calc(100% - 120px);
+
+    }
+
+    75% {
+        top: calc(100% - 120px);
+        left: 0px;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+
+}
+
+/* @keyframes image2 {
+    0% {
+        top: 0px;
+        left: calc(100% - 120px);
+    }
+
+    25% {
+        top: calc(100% - 120px);
+        left: calc(100% - 120px);
+    }
+
+    50% {
+        top: calc(100% - 120px);
+        left: 0px;
+    }
+
+    75% {
+        top: 0px;
+        left: 0px;
+    }
+
+    100% {
+        top: 0px;
+        left: calc(100% - 120px);
+    }
+
+}
+
+@keyframes image3 {
+    0% {
+        top: calc(100% - 120px);
+        left: 0px;
+    }
+
+    25% {
+        top: 0px;
+        left: 0px;
+    }
+
+    50% {
+        top: 0px;
+        left: calc(100% - 120px);
+    }
+
+    75% {
+        top: calc(100% - 120px);
+        left: calc(100% - 120px);
+    }
+
+    100% {
+        top: calc(100% - 120px);
+        left: 0px;
+    }
+
+}
+
+@keyframes image4 {
+    0% {top: calc(100% - 120px);
+        left: calc(100% - 120px);}
+
+    25% {    top: calc(100% - 120px);
+        left: 0px;}
+
+    50% {top: 0px;
+        left: 0px;}
+
+    75% {top: 0px;
+        left: calc(100% - 120px);}
+
+    100% {top: calc(100% - 120px);
+        left: calc(100% - 120px);}
+
+} */
